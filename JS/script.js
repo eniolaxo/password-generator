@@ -90,10 +90,15 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
- let length = parseInt(prompt("How many"))//this is not finished. you need to finish
-};
+  // Creating a prompt to display a message to the user of what character length they'd like
+  var passLength = prompt("What length would you like your password? (Pick between 10 - 64)");
+  }
 //conditional to check password length is a number...look for examples online
-//conditional(s) to make sure it's between 8 and 128...look for examples online
+
+//conditional(s) to make sure character length is between 10 and 64
+if (passLength < 10 || passLength > 64) {
+  passLength = prompt("Ensure it's between 10-64 characters, please try again.");
+}
 
 //Variables to store boolean (Y or N) regarding including special, numeric, lowercase, or UPPER case. Special character example below.
 var hasSpecChar = confirm('Click OK to confirm including special characters.');
@@ -105,6 +110,7 @@ if(go through different types of characters variables to see if false){else
   return;
 }
 
+//pwopts = password-options
 var pwopts = {
   length: length;
   hasSpecChar: hasSpecChar;
