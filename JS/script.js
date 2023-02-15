@@ -100,15 +100,28 @@ if (passLength < 10 || passLength > 64) {
   passLength = prompt("Ensure it's between 10-64 characters, please try again.");
 }
 
-//Variables to store boolean (Y or N) regarding including special, numeric, lowercase, or UPPER case. Special character example below.
-var hasSpecChar = confirm('Click OK to confirm including special characters.');
+// using confirmation prompts to ask the user if they want to try different characters
+var pickSpecial = confirm("Click OK if you want special characters");
+var pickNumeric = confirm("Click OK if you want numeric characters");
+var pickLowercase = confirm("Click OK if you want lowercase characters");
+var pickUppercase = confirm("Click OK if you want uppercase characters");
 
-//Conditional statement to check if user does not want to include any types of characters. Password generator ends if all 4 variable are false.
-//Psuedo code example below. Find boolean if else statement to confirm false or true
-if(go through different types of characters variables to see if false){else
-  alert('Must choose at least one character type')
+
+
+// Conditional statement to check if user does not want to include any types of characters.
+// Password generator ends if all 4 variable are false.
+// use boolean if statement to confirm this
+if (
+  pickSpecial === false &&
+  pickNumeric === false &&
+  pickLowercase === false &&
+  pickUppercase === false
+) {
+  alert("Must choose at least one character type");
+  // return is used to exit the function early and prevent the password from being generated if a character type wasn't selected
   return;
 }
+
 
 //pwopts = password-options
 var pwopts = {
