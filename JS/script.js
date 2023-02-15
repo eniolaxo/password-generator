@@ -122,24 +122,29 @@ if (
   return;
 }
 
+// Function for getting a random element from an array
+// getRandom function is defined with the parameter 'arr' which a random element will be retrieved from
+function getRandom(arr) {
+  // 'Math.random()' function generates a random number between 0 and 1. 
+  // 'Math.floor()' function rounds down the resulting number to an integer.
+    return arr[Math.floor(Math.random () * arr.length)];
+  }
 
 //pwopts = password-options
 var pwopts = {
   length: length;
   hasSpecChar: hasSpecChar;
-  //need to do other characters
   
+  //need to do other characters
+//create variable that holds random  
 };
 return pwopts;
 }
 
 
-// Function for getting a random element from an array
-function getRandom(arr) {
-  var options = getpwOpts();
-//look up Math.floor and Math.random function online
-//create variable that holds random
-}
+
+
+
 
 // Function to generate password with user input
 function generatePassword() {
