@@ -178,24 +178,6 @@ return finalPassword.join("");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//Mix in at least one of willbeChar in to result
-for loop willbeChar.length{
-  result[i] = willbeChar[i];
-}
-//turn into a string and pass into writePassword
-
-return result.join('');
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
