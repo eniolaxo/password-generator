@@ -130,16 +130,40 @@ function getRandom(arr) {
     return arr[Math.floor(Math.random () * arr.length)];
   }
 
-//pwopts = password-options
-var pwopts = {
-  length: length;
-  hasSpecChar: hasSpecChar;
+// Function to generate password with user input
+function generatePassword() {
+
+  // Ask user for password options and store the returned values
+    var passwordOptions = getPasswordOptions();
   
-  //need to do other characters
-//create variable that holds random  
-};
-return pwopts;
-}
+  // Create an empty array to store characters to be included in the password
+  var characters = [];
+  
+  // Create an empty array to store the final password
+  var finalPassword = [];
+  
+  // Include special characters if user selected "OK" for special characters
+  if (passwordOptions.pickSpecial) {
+    characters = characters.concat(specialCharacters);
+  }
+  
+   // Include numeric characters if user selected "OK" for numeric characters
+   if (passwordOptions.pickNumeric) {
+    characters = characters.concat(numericCharacters);
+  }
+  
+  // Include lowercase characters if user selected "OK" for lowercase characters
+  if (passwordOptions.pickLowercase) {
+    characters = characters.concat(lowerCasedCharacters);
+  }
+  
+  // Include uppercase characters if user selected "OK" for uppercase characters
+  if (passwordOptions.pickUppercase) {
+    characters = characters.concat(upperCasedCharacters);
+  }
+
+
+
 
 
 
