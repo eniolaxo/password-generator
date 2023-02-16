@@ -162,33 +162,32 @@ function generatePassword() {
     characters = characters.concat(upperCasedCharacters);
   }
 
+ // Using a for loop to generate the password and iterate over the password length from options object
 
+ for (var i = 0; i < passwordOptions.length; i++) {
+  // Get a random character from the characters array
+  var randomChar = getRandom(characters);
 
-
-
-
-
-
-
-// Function to generate password with user input
-function generatePassword() {
-//Variable to store pw as it's being concatenated. Look this up online.
-
-//Array to store types of characters in password
-var possibleChars = [];
-
-//Array to contain 1 of each type and make sure it's used
-var eachType = [];
-
-//conditional statements that adds array of characters into array of possible characters based on user input
-if (options.hasSpecChar) {
-  possibleChars = possibleChars.concat(specChar);
-  willbeChar.push(getRandom(specChar))
+// Adding the random character to the final password array
+finalPassword.push(randomChar);
 }
-}
-// Don't forget to do it for the other characters!
 
-//for loop to iterate over the password length from options object, selecting random indices from array of possible characters and concatenating those into result var
+// Converting the final password array to a string and return it
+return finalPassword.join("");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Mix in at least one of willbeChar in to result
 for loop willbeChar.length{
