@@ -89,16 +89,16 @@ var upperCasedCharacters = [
 ];
 
 // Function to prompt user for password options
-function getPasswordOptions() {
-  // Creating a prompt to display a message to the user of what character length they'd like
+  function getPasswordOptions() {
+// Creating a prompt to display a message to the user of what character length they'd like
   var passLength = prompt("What length would you like your password? (Pick between 10 - 64)");
-  }
-//conditional to check password length is a number...look for examples online
-
+// moved the if conditional inside the function so that passLength could be defined within an accessible scope
 //conditional(s) to make sure character length is between 10 and 64
 if (passLength < 10 || passLength > 64) {
   passLength = prompt("Ensure it's between 10-64 characters, please try again.");
 }
+}
+
 
 // using confirmation prompts to ask the user if they want to try different characters
 var pickSpecial = confirm("Click OK if you want special characters");
@@ -118,8 +118,7 @@ if (
   pickUppercase === false
 ) {
   alert("Must choose at least one character type");
-  // return is used to exit the function early and prevent the password from being generated if a character type wasn't selected
-  return;
+  // console said I made an 'illegal return', so I removed it to debug the code
 }
 
 // Function for getting a random element from an array
